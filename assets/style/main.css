@@ -207,6 +207,10 @@ button a:hover {
   display: flex;
 }
 
+#trabajos1 {
+  display: grid;
+}
+
 /* Class */
 .head {
   display: flex;
@@ -217,6 +221,10 @@ button a:hover {
   justify-content: space-between;
 }
 
+.logo-crisalida {
+  height: 65px;
+}
+
 /* Inicio Main1*/
 .Main1 {
   display: grid;
@@ -225,7 +233,7 @@ button a:hover {
 
 .box-main {
   display: grid;
-  grid-template-rows: 30px 2fr 1fr;
+  grid-template-rows: 30px 2fr auto;
   grid-template-columns: 100%;
   grid-template-areas: "h2" "imagenmain" "pmain";
 }
@@ -239,10 +247,11 @@ button a:hover {
 
 .pmain {
   grid-area: pmain;
-  background-color: #faeee7; /* Corregir desp */
+  background-color: #faeee7;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 20px;
   font-weight: 10px;
+  border-radius: 5%;
 }
 
 .imagenmain {
@@ -273,10 +282,16 @@ button a:hover {
     grid-template-columns: 50% 50%;
     grid-template-areas: "h2 h2" "imagenmain imagenmain" "pmain pmain";
   }
+  .box-main .pmain {
+    border-radius: 10%;
+  }
   .divsectioninicio {
     grid-template-rows: auto 1fr 1fr;
     grid-template-columns: auto auto;
     grid-template-areas: "h2sectioninicio h2sectioninicio" "psectioninicio psectioninicio " "imagen2  imagen2";
+  }
+  .divsectioninicio .psectioninicio {
+    border-radius: 10%;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -284,12 +299,16 @@ button a:hover {
     display: grid;
     text-align: center;
     grid-template-rows: 20%;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: auto auto 25% 25%;
     grid-template-areas: ". h2 h2 ." "pmain pmain imagenmain imagenmain";
   }
   .box-main .imagenmain {
     border: solid 4px;
     border-color: #faeee7;
+  }
+  .box-main .pmain {
+    text-align: center;
+    padding-top: 75px;
   }
   .divsectioninicio {
     display: grid;
@@ -297,6 +316,10 @@ button a:hover {
     grid-template-rows: 20%;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-areas: ". h2sectioninicio h2sectioninicio ." "imagen2 imagen2 psectioninicio  psectioninicio";
+  }
+  .divsectioninicio .psectioninicio {
+    text-align: center;
+    padding-top: 75px;
   }
 }
 .h2sectioninicio {
@@ -310,6 +333,7 @@ button a:hover {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 20px;
   font-weight: 10px;
+  border-radius: 5%;
 }
 
 .imagen2 {
@@ -361,13 +385,31 @@ button a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
-    grid-template-areas: "h2mainsobremi1 h2mainsobremi1 h2mainsobremi1" "textotrayectoria1 textotrayectoria1 foto_certificado";
+    grid-template-areas: "h2mainsobremi1 h2mainsobremi1 h2mainsobremi1" "textotrayectoria1 textotrayectoria1 foto_certificado" "textotrayectoria1 textotrayectoria1 foto_certificado";
+  }
+  .divmainsobremi1 .foto_certificado {
+    margin-left: 100px;
+    width: 700px;
+    height: 500px;
+    border: solid #faeee7;
+  }
+  .divmainsobremi1 .textotrayectoria1 {
+    margin-top: 10px;
+    padding-top: 100px;
   }
   .divmainsobremi2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas: "h2mainsobremi2 h2mainsobremi2 h2mainsobremi2" "fotocurso  textotrayectoria2 textotrayectoria2" "textotrayectoria3 textotrayectoria3 textotrayectoria3";
+  }
+  .divmainsobremi2 .textotrayectoria3 {
+    padding: 10px;
+  }
+  .divmainsobremi2 .h2mainsobremi2 {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    font-weight: 10px;
   }
 }
 .main2 {
@@ -382,6 +424,7 @@ button a:hover {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 20px;
   font-weight: 10px;
+  border-radius: 10%;
 }
 
 .textotrayectoria2 {
@@ -391,6 +434,8 @@ button a:hover {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 20px;
   font-weight: 10px;
+  border-radius: 10%;
+  padding: 100px;
 }
 
 .textotrayectoria3 {
@@ -398,6 +443,7 @@ button a:hover {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 20px;
   font-weight: 10px;
+  border-radius: 10%;
 }
 
 .fotocurso {
